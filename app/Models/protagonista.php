@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Protagonista extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+    public $timestamps = false;
+    protected $fillable = ['id','nombre'];
 }
