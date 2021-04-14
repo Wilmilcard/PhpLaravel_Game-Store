@@ -15,8 +15,8 @@ class CreateProtagonistaJuegosTable extends Migration
     {
         Schema::create('protagonista_juegos', function (Blueprint $table) {
             $table->id();
-            $table->int('id_protagonista');
-            $table->int('id_juego');
+            $table->integer('id_protagonista');
+            $table->integer('id_juego');
             $table->timestamps();
         });
     }

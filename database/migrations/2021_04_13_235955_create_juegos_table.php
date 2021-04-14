@@ -16,10 +16,10 @@ class CreateJuegosTable extends Migration
         Schema::create('juegos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->int('ano');
-            $table->int('id_director');
-            $table->int('stock');
-            $table->int('precio');
+            $table->integer('ano');
+            $table->integer('id_director');
+            $table->integer('stock');
+            $table->integer('precio');
             $table->timestamps();
         });
     }

@@ -15,8 +15,8 @@ class CreateAlquilersTable extends Migration
     {
         Schema::create('alquilers', function (Blueprint $table) {
             $table->id();
-            $table->int('id_cliente');
-            $table->int('valor_total');
+            $table->integer('id_cliente');
+            $table->integer('valor_total');
             $table->boolean('estado');
             $table->date('fecha_reservacion');
             $table->date('fecha_devolucion');

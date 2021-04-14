@@ -15,9 +15,9 @@ class CreateAlquilerDetsTable extends Migration
     {
         Schema::create('alquiler_dets', function (Blueprint $table) {
             $table->id();
-            $table->int('id_juego');
-            $table->int('cantidad');
-            $table->int('valor');
+            $table->integer('id_juego');
+            $table->integer('cantidad');
+            $table->integer('valor');
             $table->timestamps();
         });
     }

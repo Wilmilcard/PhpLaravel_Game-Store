@@ -15,7 +15,7 @@ class CreatePlataformaJuegosTable extends Migration
     {
         Schema::create('plataforma_juegos', function (Blueprint $table) {
             $table->id();
-            $table->int('id_plataforma');
+            $table->integer('id_plataforma');
             $table->timestamps();
         });
     }
