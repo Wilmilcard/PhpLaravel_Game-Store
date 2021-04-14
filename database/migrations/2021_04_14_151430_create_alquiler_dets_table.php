@@ -15,11 +15,14 @@ class CreateAlquilerDetsTable extends Migration
     {
         Schema::create('alquiler_dets', function (Blueprint $table) {
             $table->engine='InnoDB';
-            $table->integer('id_alquiler');
-            $table->integer('id_juego');
+            $table->integer('id_alquiler')->unsigned();
+            $table->integer('id_juego')->unsigned();
             $table->integer('cantidad');
             $table->integer('valor');
             $table->timestamps();
+
+            $table->foreign('id_alquiler')->references('id')->on('alquilers');
+            $table->foreign('id_juego')->references('id')->on('juegos');
         });
     }
 

@@ -15,9 +15,12 @@ class CreatePlataformaJuegosTable extends Migration
     {
         Schema::create('plataforma_juegos', function (Blueprint $table) {
             $table->engine='InnoDB';
-            $table->integer('id_juego');
-            $table->integer('id_plataforma');
+            $table->integer('id_juego')->unsigned();
+            $table->integer('id_plataforma')->unsigned();
             $table->timestamps();
+
+            $table->foreign('id_juego')->references('id')->on('juegos');
+            $table->foreign('id_plataforma')->references('id')->on('plataformas');
         });
     }
 

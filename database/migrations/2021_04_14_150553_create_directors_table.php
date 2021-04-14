@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJuegosTable extends Migration
+class CreateDirectorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateJuegosTable extends Migration
      */
     public function up()
     {
-        Schema::create('juegos', function (Blueprint $table) {
+        Schema::create('directors', function (Blueprint $table) {
             $table->engine='InnoDB';
             $table->increments('id');
             $table->string('nombre');
-            $table->integer('ano');
-            $table->integer('id_director');
-            $table->integer('stock');
-            $table->integer('precio');
+            $table->integer('id_marca')->unsigned();
             $table->timestamps();
+
+            $table->foreign('id_marca')->references('id')->on('marcas');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateJuegosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('juegos');
+        Schema::dropIfExists('directors');
     }
 }
