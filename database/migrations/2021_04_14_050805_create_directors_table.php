@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProtagonistasTable extends Migration
+class CreateDirectorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateProtagonistasTable extends Migration
      */
     public function up()
     {
-        Schema::create('protagonistas', function (Blueprint $table) {
-            $table->id();
+        Schema::create('directors', function (Blueprint $table) {
+            $table->engine='InnoDB';
+            $table->increments('id');
             $table->string('nombre');
+            $table->integer('id_marca');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateProtagonistasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('protagonistas');
+        Schema::dropIfExists('directors');
     }
 }

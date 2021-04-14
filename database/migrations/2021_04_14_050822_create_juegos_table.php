@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePlataformasTable extends Migration
+class CreateJuegosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreatePlataformasTable extends Migration
      */
     public function up()
     {
-        Schema::create('plataformas', function (Blueprint $table) {
+        Schema::create('juegos', function (Blueprint $table) {
+            $table->engine='InnoDB';
             $table->increments('id');
             $table->string('nombre');
+            $table->integer('ano');
+            $table->integer('id_director');
+            $table->integer('stock');
+            $table->integer('precio');
             $table->timestamps();
         });
     }
@@ -27,6 +32,6 @@ class CreatePlataformasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plataformas');
+        Schema::dropIfExists('juegos');
     }
 }

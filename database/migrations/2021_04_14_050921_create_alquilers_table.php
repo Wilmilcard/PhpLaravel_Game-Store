@@ -14,10 +14,11 @@ class CreateAlquilersTable extends Migration
     public function up()
     {
         Schema::create('alquilers', function (Blueprint $table) {
-            $table->id();
+            $table->engine='InnoDB';
+            $table->increments('id');
             $table->integer('id_cliente');
             $table->integer('valor_total');
-            $table->boolean('estado');
+            $table->integer('estado');
             $table->date('fecha_reservacion');
             $table->date('fecha_devolucion');
             $table->timestamps();
