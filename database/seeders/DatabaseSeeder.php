@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Estado;
-use Database\Seeders;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,6 +17,9 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(EstadoSeeder::class);
+        $this->call(ProtagonistaSeeder::class);
+        $this->call(MarcaSeeder::class);
+        $this->call(PlataformaSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

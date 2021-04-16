@@ -15,7 +15,6 @@ class EstadoSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
 
         $estado = new Estado();
         $estado->nombre = "Activo";
@@ -25,6 +24,16 @@ class EstadoSeeder extends Seeder
         $estado->nombre = "Inactivo";
         $estado->save();
 
+        $estado = new Estado();
+        $estado->nombre = "Devuelto";
+        $estado->save();
+
+        $estado = new Estado();
+        $estado->nombre = "En Prestamo";
+        $estado->save();
+
+        /*
+        $faker = Faker::create();
         for ($i=1; $i<=3; $i++)
         {
             Estado::create(
@@ -33,5 +42,6 @@ class EstadoSeeder extends Seeder
                 ]
             );
         }
+        */
     }
 }
