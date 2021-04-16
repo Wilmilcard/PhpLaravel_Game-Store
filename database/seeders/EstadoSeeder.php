@@ -17,7 +17,15 @@ class EstadoSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i=1; $i<=5; $i++)
+        $estado = new Estado();
+        $estado->nombre = "Activo";
+        $estado->save();
+
+        $estado = new Estado();
+        $estado->nombre = "Inactivo";
+        $estado->save();
+
+        for ($i=1; $i<=3; $i++)
         {
             Estado::create(
                 [

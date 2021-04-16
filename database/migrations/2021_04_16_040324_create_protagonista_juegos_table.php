@@ -19,8 +19,8 @@ class CreateProtagonistaJuegosTable extends Migration
             $table->integer('id_protagonista')->unsigned();
             $table->timestamps();
 
-            $table->foreign('id_juego')->references('id')->on('juegos');
-            $table->foreign('id_protagonista')->references('id')->on('protagonistas');
+            $table->foreign('id_juego')->references('id')->on('juegos')->onDelete('cascade');
+            $table->foreign('id_protagonista')->references('id')->on('protagonistas')->onDelete('cascade');
         });
     }
 

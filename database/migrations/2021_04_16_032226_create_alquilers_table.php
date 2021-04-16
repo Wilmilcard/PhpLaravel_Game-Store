@@ -21,9 +21,12 @@ class CreateAlquilersTable extends Migration
             $table->integer('estado');
             $table->date('fecha_reservacion');
             $table->date('fecha_devolucion');
+            $table->integer('id_estado')->unsigned();
             $table->timestamps();
 
-            $table->foreign('id_cliente')->references('id')->on('clientes');
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreign('id_estado')->references('id')->on('estados')->onDelete('cascade');
+
         });
     }
 

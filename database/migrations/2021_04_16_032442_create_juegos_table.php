@@ -23,7 +23,7 @@ class CreateJuegosTable extends Migration
             $table->integer('precio');
             $table->timestamps();
 
-            $table->foreign('id_director')->references('id')->on('directors');
+            $table->foreign('id_director')->references('id')->on('directors')->onDelete('cascade');
         });
     }
 
