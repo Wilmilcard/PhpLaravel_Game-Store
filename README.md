@@ -38,13 +38,13 @@ Usted ha sido contratado para gestionar todo el proceso básico de venta de una 
 
 Para que el proyecto funcione correctamente se debe de tener instalado:
 
-1. IDE de desarrollo (Visual Code)
-2. XAMPP
-3. Composer
-4. Postman
-5. Node js
+- IDE de desarrollo (Visual Code)
+- XAMPP
+- Composer
+- Postman
+- Node js
 
-Una vez se tengan las herraamientas instaladas:
+Una vez se tengan las herramientas instaladas:
 
 1. Clonar el repositorio
 2. Encender XAMPP (el apache y el MySql)
