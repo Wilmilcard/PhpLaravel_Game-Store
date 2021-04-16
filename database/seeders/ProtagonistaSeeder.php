@@ -15,8 +15,64 @@ class ProtagonistaSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Mario Bross";
+        $protagonista->save();
 
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Tommy Vercetti";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Altaïr Ibn-La'Ahad";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Natan Drake";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Crash Bandicoot";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Samus Aran";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "John-117";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Aiden Perce";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Carl Jhonson";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Red";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Crazy Dave";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Spyro";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Marcus Fenix";
+        $protagonista->save();
+
+        $protagonista = new Protagonista();
+        $protagonista->nombre = "Vass";
+        $protagonista->save();
+
+        /*
+        $faker = Faker::create();
         for($i=1; $i<=10; $i++)
         {
             Protagonista::create(
@@ -25,6 +81,7 @@ class ProtagonistaSeeder extends Seeder
                 ]
             );
         }
+        */
 
         //
     }

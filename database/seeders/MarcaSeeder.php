@@ -41,5 +41,9 @@ class MarcaSeeder extends Seeder
         $marca = new Marca();
         $marca->nombre = "Nintendo";
         $marca->save();
+
+        $marca = new Marca();
+        $marca->nombre = "Rockstar";
+        $marca->save();
     }
 }
