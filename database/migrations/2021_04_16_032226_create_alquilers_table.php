@@ -18,7 +18,6 @@ class CreateAlquilersTable extends Migration
             $table->increments('id');
             $table->integer('id_cliente')->unsigned();
             $table->integer('valor_total');
-            $table->integer('estado');
             $table->date('fecha_reservacion');
             $table->date('fecha_devolucion');
             $table->integer('id_estado')->unsigned();

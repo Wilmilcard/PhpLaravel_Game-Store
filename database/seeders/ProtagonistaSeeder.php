@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Protagonista;
-use Faker\Factory as Faker;
 
 class ProtagonistaSeeder extends Seeder
 {
@@ -15,74 +14,20 @@ class ProtagonistaSeeder extends Seeder
      */
     public function run()
     {
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Mario Bross";
-        $protagonista->save();
+        Protagonista::create(['nombre'=>'Mario Bross']);
+        Protagonista::create(['nombre'=>'Tommy Vercetti']);
+        Protagonista::create(['nombre'=>"Altaïr Ibn-La'Ahad"]);
+        Protagonista::create(['nombre'=>'Natan Drake']);
+        Protagonista::create(['nombre'=>'Crash Bandicoot']);
+        Protagonista::create(['nombre'=>'Samus Aran']);
+        Protagonista::create(['nombre'=>'John-117']);
+        Protagonista::create(['nombre'=>'Aiden Perce']);
+        Protagonista::create(['nombre'=>'Carl Jhonson']);
+        Protagonista::create(['nombre'=>'Red']);
+        Protagonista::create(['nombre'=>'Crazy Dave']);
+        Protagonista::create(['nombre'=>'Spyro']);
+        Protagonista::create(['nombre'=>'Marcus Fenix']);
+        Protagonista::create(['nombre'=>'Vass']);
 
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Tommy Vercetti";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Altaïr Ibn-La'Ahad";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Natan Drake";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Crash Bandicoot";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Samus Aran";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "John-117";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Aiden Perce";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Carl Jhonson";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Red";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Crazy Dave";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Spyro";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Marcus Fenix";
-        $protagonista->save();
-
-        $protagonista = new Protagonista();
-        $protagonista->nombre = "Vass";
-        $protagonista->save();
-
-        /*
-        $faker = Faker::create();
-        for($i=1; $i<=10; $i++)
-        {
-            Protagonista::create(
-                [
-                    'nombre'=>$faker->name()
-                ]
-            );
-        }
-        */
-
-        //
     }
 }

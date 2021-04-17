@@ -14,24 +14,10 @@ class PlataformaSeeder extends Seeder
      */
     public function run()
     {
-        $plataforma = new Plataforma();
-        $plataforma->nombre = "PC";
-        $plataforma->save();
-
-        $plataforma = new Plataforma();
-        $plataforma->nombre = "Xbox";
-        $plataforma->save();
-
-        $plataforma = new Plataforma();
-        $plataforma->nombre = "PlayStation";
-        $plataforma->save();
-
-        $plataforma = new Plataforma();
-        $plataforma->nombre = "Nintendo";
-        $plataforma->save();
-
-        $plataforma = new Plataforma();
-        $plataforma->nombre = "Android";
-        $plataforma->save();
+        Plataforma::create(['nombre'=>'PC']);
+        Plataforma::create(['nombre'=>'Xbox']);
+        Plataforma::create(['nombre'=>'PlayStation']);
+        Plataforma::create(['nombre'=>'Nintendo']);
+        Plataforma::create(['nombre'=>'Android']);
     }
 }

@@ -14,36 +14,14 @@ class MarcaSeeder extends Seeder
      */
     public function run()
     {
-        $marca = new Marca();
-        $marca->nombre = "Microsoft";
-        $marca->save();
-
-        $marca = new Marca();
-        $marca->nombre = "Sony";
-        $marca->save();
-
-        $marca = new Marca();
-        $marca->nombre = "EA";
-        $marca->save();
-
-        $marca = new Marca();
-        $marca->nombre = "Ubisoft";
-        $marca->save();
-
-        $marca = new Marca();
-        $marca->nombre = "Rovio";
-        $marca->save();
-
-        $marca = new Marca();
-        $marca->nombre = "Activision";
-        $marca->save();
-
-        $marca = new Marca();
-        $marca->nombre = "Nintendo";
-        $marca->save();
-
-        $marca = new Marca();
-        $marca->nombre = "Rockstar";
-        $marca->save();
+        Marca::create(['nombre'=>'Microsoft']);
+        Marca::create(['nombre'=>'Sony']);
+        Marca::create(['nombre'=>'EA']);
+        Marca::create(['nombre'=>'Ubisoft']);
+        Marca::create(['nombre'=>'Rovio']);
+        Marca::create(['nombre'=>'Activision']);
+        Marca::create(['nombre'=>'Nintendo']);
+        Marca::create(['nombre'=>'Rockstar']);
+        Marca::create(['nombre'=>'CD Project Red']);
     }
 }

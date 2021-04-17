@@ -8,11 +8,13 @@ use Exception;
 
 class EstadoController extends Controller
 {
-    public function getEstadoAll(){
+    public function getEstadoAll()
+    {
         return response()->json(Estado::all(), 200);
     }
 
-    public function getEstado($id){
+    public function getEstado($id)
+    {
         $estado = Estado::find($id);
         if(is_null($estado)){
             return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra un estado con ese código.'])],404);
@@ -20,7 +22,8 @@ class EstadoController extends Controller
         return response()->json(['status'=>'ok','data'=>$estado::find($id)],200);
     }
 
-    public function postEstado(Request $request){
+    public function postEstado(Request $request)
+    {
         $request->validate([
             'name' => 'required',
             'description' => 'required',
@@ -32,7 +35,8 @@ class EstadoController extends Controller
         return response(['status'=>'created','data'=>$estado],201);
     }
 
-    public function putEstado(Request $request, $id){
+    public function putEstado(Request $request, $id)
+    {
         $estado = Estado::find($id);
         if(is_null($estado)){
             return response()->json(['errors'=>array(['code'=>404,'message'=>'No se encuentra un estado con ese código.'])],404);
@@ -41,8 +45,8 @@ class EstadoController extends Controller
         return response($estado,200);
     }
 
-    public function deleteEstado($id){
-
+    public function deleteEstado($id)
+    {
         $estado = Estado::find($id);
 
         try{
