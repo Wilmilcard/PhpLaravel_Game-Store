@@ -21,11 +21,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['namespace'=>'App\Http\Controllers'],function(){
     //Estado
     $controller_estado = 'EstadoController@';
-    Route::get('estado', "{$controller_estado}getEstadoAll");
-    Route::get('estado/{id}', "{$controller_estado}getEstado");
-    Route::post('addEstado',"{$controller_estado}postEstado");
-    Route::put('updateEstado/{id}',"{$controller_estado}putEstado");
-    Route::delete('removeEstado/{id}',"{$controller_estado}deleteEstado");
+    Route::get('estado', "{$controller_estado}index");
+    Route::post('estado/create',"{$controller_estado}create");
+    Route::get('estado/{id}', "{$controller_estado}show");
+    Route::put('estado/{id}',"{$controller_estado}edit");
+    Route::delete('estado/{id}',"{$controller_estado}destroy");
 });
 
 
