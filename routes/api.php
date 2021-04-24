@@ -24,7 +24,7 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     Route::get('estado', "{$controller_estado}index");
     Route::post('estado/create',"{$controller_estado}create");
     Route::get('estado/{id}', "{$controller_estado}show");
-    Route::put('estado/{id}',"{$controller_estado}edit");
+    Route::put('estado/{id}',"{$controller_estado}update");
     Route::delete('estado/{id}',"{$controller_estado}destroy");
 });
 

@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
 use App\Models\Estado;
-use Response;
 use Exception;
 
 class EstadoController extends Controller
@@ -19,7 +18,6 @@ class EstadoController extends Controller
             return Estado::simplePaginate(10);
         });
         return response()->json(['status'=>'ok', 'siguiente'=>$estados->nextPageUrl(),'anterior'=>$estados->previousPageUrl(),'data'=>$estados->items()],200);
-        //return response()->json(Estado::all(), 200);
     }
 
     public function show($id)
@@ -41,24 +39,44 @@ class EstadoController extends Controller
         $nuevoEstado = Estado::create($request->all());
 
         return response(['status'=>'creado','data'=>$nuevoEstado],201);
-
-        // $request->validate([
-        //     'nombre' => 'required',
-        //     'description' => 'required',
-        //     'price' => 'required'
-        // ]);
     }
 
-    public function edit(Request $request, $id)
+    public function edit() { }
+
+
+    public function update(Request $request, $id)
     {
         $estado = Estado::find($id);
 
-        if(is_null($estado)){
+        if(is_null($estado))
+        {
             return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra un estado con ese código.'])],404);
         }
 
+        $nombre=$request->input('nombre');
+
+        if($request->method() === 'PATCH')
+        {
+            $bandera = false;
+            if ($nombre)
+            {
+                $estado->nombre = $nombre;
+                $bandera=true;
+            }
+
+            if($bandera)
+            {
+                $estado->save();
+                return response()->json(['status'=>'ok','data'=>$estado], 200);
+            }
+            else
+            {
+                return response()->json(['error'=>array(['codigo'=>304,'mensaje'=>'No se ha modificado ningún dato.'])],304);
+            }
+        }
+
         $estado->update($request->all());
-        return response($estado,200);
+        return response(['status'=>'ok','data'=>$estado],200);
     }
 
     public function destroy($id)
