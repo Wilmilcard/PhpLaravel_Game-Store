@@ -14,7 +14,7 @@ class EstadoController extends Controller
 {
     public function index()
     {
-        $estados = Cache::remember('cacheestados', 10/60, function () {
+        $estados = Cache::remember('cacheestados', 20/60, function () {
             return Estado::simplePaginate(10);
         });
         return response()->json(['status'=>'ok', 'siguiente'=>$estados->nextPageUrl(),'anterior'=>$estados->previousPageUrl(),'data'=>$estados->items()],200);

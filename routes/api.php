@@ -22,10 +22,21 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     //Estado
     $controller_estado = 'EstadoController@';
     Route::get('estado', "{$controller_estado}index");
-    Route::post('estado/create',"{$controller_estado}create");
     Route::get('estado/{id}', "{$controller_estado}show");
+    Route::post('estado/create',"{$controller_estado}create");
     Route::put('estado/{id}',"{$controller_estado}update");
+    Route::patch('protagonista/{id}',"{$controller_estado}update");
     Route::delete('estado/{id}',"{$controller_estado}destroy");
+
+    //Protagonista
+    $controller_protagonista ='ProtagonistaController@';
+    Route::get('protagonista', "{$controller_protagonista}index");
+    Route::get('protagonista/{id}', "{$controller_protagonista}show");
+    Route::post('protagonista/create',"{$controller_protagonista}create");
+    Route::put('protagonista/{id}',"{$controller_protagonista}update");
+    Route::patch('protagonista/{id}',"{$controller_protagonista}update");
+    Route::delete('protagonista/{id}',"{$controller_protagonista}destroy");
+
 });
 
 
