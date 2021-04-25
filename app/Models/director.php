@@ -10,4 +10,5 @@ class Director extends Model
     //use HasFactory;
     public $timestamps = false;
     protected $fillable = ['id','nombre','id_marca'];
+    protected $hidden = ['created_at','updated_at'];
 }

@@ -10,4 +10,5 @@ class Protagonista_juego extends Model
     //use HasFactory;
     public $timestamps = false;
     protected $fillable = ['id_juego','id_protagonista'];
+    protected $hidden = ['created_at','updated_at'];
 }

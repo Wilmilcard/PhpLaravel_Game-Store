@@ -10,4 +10,5 @@ class Plataforma_juego extends Model
     //use HasFactory;
     public $timestamps = false;
     protected $fillable = ['id_juego','id_plataforma'];
+    protected $hidden = ['created_at','updated_at'];
 }

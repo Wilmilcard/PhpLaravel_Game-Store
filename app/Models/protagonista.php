@@ -10,4 +10,5 @@ class Protagonista extends Model
     //use HasFactory;
     public $timestamps = false;
     protected $fillable = ['id','nombre'];
+    protected $hidden = ['created_at','updated_at'];
 }

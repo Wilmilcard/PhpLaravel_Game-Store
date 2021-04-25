@@ -4,26 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use App\Models\Protagonista;
+use App\Models\Marca;
 use Exception;
 
-class ProtagonistaController extends Controller
+class MarcaController extends Controller
 {
     public function index()
     {
-        $protagonista = Cache::remember('protagonistacache', 20/60, function () {
-            return Protagonista::simplePaginate(15);
+        $marca = Cache::remember('marcacache', 20/60, function () {
+            return Marca::simplePaginate(10);
         });
-        return response()->json(['status'=>'ok', 'siguiente'=>$protagonista->nextPageUrl(),'anterior'=>$protagonista->previousPageUrl(),'data'=>$protagonista->items()],200);
+        return response()->json(['status'=>'ok', 'siguiente'=>$marca->nextPageUrl(),'anterior'=>$marca->previousPageUrl(),'data'=>$marca->items()],200);
     }
 
     public function show($id)
     {
-        $protagonista = Protagonista::find($id);
-        if(is_null($protagonista)){
-            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra un protagonista con ese código.'])],404);
+        $marca = Marca::find($id);
+        if(is_null($marca)){
+            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra una marca con ese código.'])],404);
         }
-        return response()->json(['status'=>'ok','data'=>$protagonista],200);
+        return response()->json(['status'=>'ok','data'=>$marca],200);
     }
 
     public function create(Request $request)
@@ -35,8 +35,8 @@ class ProtagonistaController extends Controller
 
         try
         {
-            $nuevoProtagonista = Protagonista::create($request->all());
-            return response(['status'=>'creado','data'=>$nuevoProtagonista],201);
+            $nuevaMarca = Marca::create($request->all());
+            return response(['status'=>'creado','data'=>$nuevaMarca],201);
         }
         catch(Exception $e)
         {
@@ -47,11 +47,11 @@ class ProtagonistaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $protagonista = Protagonista::find($id);
+        $marca = Marca::find($id);
 
-        if(is_null($protagonista))
+        if(is_null($marca))
         {
-            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra un protagonista con ese código.'])],404);
+            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra una marca con ese código.'])],404);
         }
 
         $nombre=$request->input('nombre');
@@ -63,14 +63,14 @@ class ProtagonistaController extends Controller
                 $bandera = false;
                 if ($nombre)
                 {
-                    $protagonista->nombre = $nombre;
+                    $marca->nombre = $nombre;
                     $bandera=true;
                 }
 
                 if($bandera)
                 {
-                    $protagonista->save();
-                    return response()->json(['status'=>'ok','data'=>$protagonista], 200);
+                    $marca->save();
+                    return response()->json(['status'=>'ok','data'=>$marca], 200);
                 }
                 else
                 {
@@ -78,28 +78,27 @@ class ProtagonistaController extends Controller
                 }
             }
 
-            $protagonista->update($request->all());
-            return response(['status'=>'ok','data'=>$protagonista],200);
+            $marca->update($request->all());
+            return response(['status'=>'ok','data'=>$marca],200);
         }
         catch(Exception $e)
         {
             return response()->json(['error'=>array(['codigo'=>409,'mensaje'=>'Conflicto al procesar peticion'])],409);
         }
-
     }
 
     public function destroy($id)
     {
-        $protagonista = Protagonista::find($id);
+        $marca = Marca::find($id);
 
         try
         {
-            if(is_null($protagonista))
+            if(is_null($marca))
             {
-                return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra un protagonista con ese código.'])],404);
+                return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra una marca con ese código.'])],404);
             }
 
-            $protagonista->delete(); //no se usa el metodo eliminar pero queda ahi por documentacion
+            $marca->delete(); //no se usa el metodo eliminar pero queda ahi por documentacion
             return response()->json(['status'=>'no content','data'=>'Se ha eliminado correctamente'],204);
         }
         catch (Exception $e)

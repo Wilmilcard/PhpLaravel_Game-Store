@@ -2,30 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use App\Models\Estado;
+use App\Models\Plataforma;
 use Exception;
 
-class EstadoController extends Controller
+class PlataformaController extends Controller
 {
     public function index()
     {
-        $estados = Cache::remember('cacheestados', 20/60, function () {
-            return Estado::simplePaginate(10);
+        $plataforma = Cache::remember('cacheestados', 20/60, function () {
+            return Plataforma::simplePaginate(10);
         });
-        return response()->json(['status'=>'ok', 'siguiente'=>$estados->nextPageUrl(),'anterior'=>$estados->previousPageUrl(),'data'=>$estados->items()],200);
+        return response()->json(['status'=>'ok', 'siguiente'=>$plataforma->nextPageUrl(),'anterior'=>$plataforma->previousPageUrl(),'data'=>$plataforma->items()],200);
     }
 
     public function show($id)
     {
-        $estado = Estado::find($id);
-        if(is_null($estado)){
-            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra un estado con ese código.'])],404);
+        $plataforma = Plataforma::find($id);
+        if(is_null($plataforma)){
+            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra una plataforma con ese código.'])],404);
         }
-        return response()->json(['status'=>'ok','data'=>$estado],200);
+        return response()->json(['status'=>'ok','data'=>$plataforma],200);
     }
 
     public function create(Request $request)
@@ -37,8 +35,8 @@ class EstadoController extends Controller
 
         try
         {
-            $nuevoEstado = Estado::create($request->all());
-            return response(['status'=>'creado','data'=>$nuevoEstado],201);
+            $nuevaPlataforma = Plataforma::create($request->all());
+            return response(['status'=>'creado','data'=>$nuevaPlataforma],201);
         }
         catch(Exception $e)
         {
@@ -52,11 +50,11 @@ class EstadoController extends Controller
 
     public function update(Request $request, $id)
     {
-        $estado = Estado::find($id);
+        $plataforma = Plataforma::find($id);
 
-        if(is_null($estado))
+        if(is_null($plataforma))
         {
-            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra un estado con ese código.'])],404);
+            return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra una plataforma con ese código.'])],404);
         }
 
         $nombre=$request->input('nombre');
@@ -68,14 +66,14 @@ class EstadoController extends Controller
                 $bandera = false;
                 if ($nombre)
                 {
-                    $estado->nombre = $nombre;
+                    $plataforma->nombre = $nombre;
                     $bandera=true;
                 }
 
                 if($bandera)
                 {
-                    $estado->save();
-                    return response()->json(['status'=>'ok','data'=>$estado], 200);
+                    $plataforma->save();
+                    return response()->json(['status'=>'ok','data'=>$plataforma], 200);
                 }
                 else
                 {
@@ -83,8 +81,8 @@ class EstadoController extends Controller
                 }
             }
 
-            $estado->update($request->all());
-            return response(['status'=>'ok','data'=>$estado],200);
+            $plataforma->update($request->all());
+            return response(['status'=>'ok','data'=>$plataforma],200);
         }
         catch(Exception $e)
         {
@@ -94,22 +92,21 @@ class EstadoController extends Controller
 
     public function destroy($id)
     {
-        $estado = Estado::find($id);
+        $plataforma = Plataforma::find($id);
 
         try
         {
-            if(is_null($estado))
+            if(is_null($plataforma))
             {
-                return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra un estado con ese código.'])],404);
+                return response()->json(['error'=>array(['codigo'=>404,'mensaje'=>'No se encuentra una plataforma con ese código.'])],404);
             }
 
-            $estado->delete(); //no se usa el metodo eliminar pero queda ahi por documentacion
+            $plataforma->delete(); //no se usa el metodo eliminar pero queda ahi por documentacion
             return response()->json(['status'=>'no content','data'=>'Se ha eliminado correctamente'],204);
         }
         catch (Exception $e)
         {
             return response()->json(['status'=>'bad request','data'=>'Conflicto al procesar peticion'],409);
         }
-
     }
 }
