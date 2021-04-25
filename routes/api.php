@@ -63,6 +63,15 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     Route::put('cliente/{id}',"{$controller_cliente}update");
     Route::patch('cliente/{id}',"{$controller_cliente}update");
     Route::delete('cliente/{id}',"{$controller_cliente}destroy");
+
+    //Alquiler
+    $controller_alquiler ='AlquilerController@';
+    Route::get('alquiler', "{$controller_alquiler}index");
+    Route::get('alquiler/{nit}', "{$controller_alquiler}show");
+    Route::post('alquiler/create',"{$controller_alquiler}create");
+    Route::put('alquiler/{id}',"{$controller_alquiler}update");
+    Route::patch('alquiler/{id}',"{$controller_alquiler}update");
+    Route::delete('alquiler/{id}',"{$controller_alquiler}destroy");
 });
 
 
