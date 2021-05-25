@@ -14,11 +14,11 @@ class Alquiler extends Model
 
     public function estado()
     {
-        return $this->hasOne(Estado::class, 'id', 'id_estado');
+        return $this->belongsTo(Estado::class, 'id_estado');
     }
 
     public function cliente()
     {
-        return $this->hasOne(Cliente::class, 'id', 'id_cliente');
+        return $this->belongsTo(Cliente::class, 'id_cliente');
     }
 }

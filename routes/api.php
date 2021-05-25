@@ -71,7 +71,6 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     Route::post('alquiler/create',"{$controller_alquiler}create");
     Route::put('alquiler/{id}',"{$controller_alquiler}update");
     Route::patch('alquiler/{id}',"{$controller_alquiler}update");
-    Route::delete('alquiler/{id}',"{$controller_alquiler}destroy");
 });
 
 

@@ -12,8 +12,13 @@ class Estado extends Model
     protected $fillable = ['id','nombre'];
     protected $hidden = ['created_at','updated_at'];
 
-    // public function alquiler()
+    // public function alquiler_estado()
     // {
     //     return $this->belongsTo(Alquiler::class, 'id_estado');
     // }
+
+    public function alquiler()
+    {
+        return $this->hasMany(Alquiler::class, 'Id');
+    }
 }
