@@ -40,7 +40,7 @@ class ClienteController extends Controller
         }
         catch(Exception $e)
         {
-            return response()->json(['error'=>array(['codigo'=>304,'mensaje'=>'No se ha creado ningún dato.'])],304);
+            return response()->json(['error'=>array(['codigo'=>304,'mensaje'=>'No se ha creado ningún dato.','error'=>$e])],304);
         }
 
     }
@@ -88,7 +88,7 @@ class ClienteController extends Controller
         }
         catch(Exception $e)
         {
-            return response()->json(['error'=>array(['codigo'=>409,'mensaje'=>'Conflicto al procesar peticion'])],409);
+            return response()->json(['error'=>array(['codigo'=>409,'mensaje'=>'Conflicto al procesar peticion','error'=>$e])],409);
         }
     }
 
@@ -108,7 +108,7 @@ class ClienteController extends Controller
         }
         catch (Exception $e)
         {
-            return response()->json(['status'=>'bad request','data'=>'Conflicto al procesar peticion'],409);
+            return response()->json(['status'=>'bad request','data'=>'Conflicto al procesar peticion','error'=>$e],409);
         }
 
     }

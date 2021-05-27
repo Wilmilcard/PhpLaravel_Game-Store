@@ -40,7 +40,7 @@ class ProtagonistaController extends Controller
         }
         catch(Exception $e)
         {
-            return response()->json(['error'=>array(['codigo'=>304,'mensaje'=>'No se ha creado ningún dato.'])],304);
+            return response()->json(['error'=>array(['codigo'=>304,'mensaje'=>'No se ha creado ningún dato.','error'=>$e])],304);
         }
 
     }
@@ -83,7 +83,7 @@ class ProtagonistaController extends Controller
         }
         catch(Exception $e)
         {
-            return response()->json(['error'=>array(['codigo'=>409,'mensaje'=>'Conflicto al procesar peticion'])],409);
+            return response()->json(['error'=>array(['codigo'=>409,'mensaje'=>'Conflicto al procesar peticion','error'=>$e])],409);
         }
 
     }
@@ -104,7 +104,7 @@ class ProtagonistaController extends Controller
         }
         catch (Exception $e)
         {
-            return response()->json(['status'=>'bad request','data'=>'Error al momento usar recurso del servidor'],400);
+            return response()->json(['status'=>'bad request','data'=>'Error al momento usar recurso del servidor','error'=>$e],400);
         }
 
     }

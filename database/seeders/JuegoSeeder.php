@@ -29,6 +29,46 @@ class JuegoSeeder extends Seeder
         ]);
 
         Juego::create([
+            'nombre'=>'Assassins Creed Valhalla',
+            'ano'=>'2020',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'GTA III',
+            'ano'=>'2001',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'GTA Vice City',
+            'ano'=>'2002',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'GTA San Andreas',
+            'ano'=>'2004',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'GTA IV',
+            'ano'=>'2010',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
             'nombre'=>'GTA V',
             'ano'=>'2013',
             'id_director'=>$faker->numberBetween(1,$numero_directores),
@@ -39,6 +79,38 @@ class JuegoSeeder extends Seeder
         Juego::create([
             'nombre'=>'FIFA 17',
             'ano'=>'2016',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'FIFA 18',
+            'ano'=>'2017',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'FIFA 19',
+            'ano'=>'2018',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'FIFA 20',
+            'ano'=>'2019',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'FIFA 21',
+            'ano'=>'2020',
             'id_director'=>$faker->numberBetween(1,$numero_directores),
             'stock'=>$faker->numberBetween(5,100),
             'precio'=>$faker->randomFloat(2,17000,50000)
@@ -68,6 +140,29 @@ class JuegoSeeder extends Seeder
             'precio'=>$faker->randomFloat
             (2,17000,50000)]);
 
+        Juego::create([
+            'nombre'=>'Watch_Dogs 2',
+            'ano'=>'2018',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat
+            (2,17000,50000)]);
+
+        Juego::create([
+            'nombre'=>'The Witcher',
+            'ano'=>'2007',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'The Witcher 2',
+            'ano'=>'2011',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
 
         Juego::create([
             'nombre'=>'The Witcher 3',
@@ -86,8 +181,32 @@ class JuegoSeeder extends Seeder
         ]);
 
         Juego::create([
+            'nombre'=>'Age Of Empires',
+            'ano'=>'1997',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
             'nombre'=>'Age Of Empires II',
             'ano'=>'1999',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Age Of Empires III',
+            'ano'=>'2005',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Age Of Empires IV',
+            'ano'=>'2022',
             'id_director'=>$faker->numberBetween(1,$numero_directores),
             'stock'=>$faker->numberBetween(5,100),
             'precio'=>$faker->randomFloat(2,17000,50000)
@@ -121,6 +240,14 @@ class JuegoSeeder extends Seeder
 
         Juego::create([
             'nombre'=>'The Sims',
+            'ano'=>'2001',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'The Sims II',
             'ano'=>'2001',
             'id_director'=>$faker->numberBetween(1,$numero_directores),
             'stock'=>$faker->numberBetween(5,100),
@@ -163,6 +290,102 @@ class JuegoSeeder extends Seeder
         Juego::create([
             'nombre'=>'Fligth Simulation',
             'ano'=>'2020',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Chivarly II',
+            'ano'=>'2021',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Pureya',
+            'ano'=>'2021',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Rust',
+            'ano'=>'2021',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Mass Effect: Legendary Edition',
+            'ano'=>'2021',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Cyberpunk 2077',
+            'ano'=>'2021',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'The Last of Us 2',
+            'ano'=>'2020',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Overwatch',
+            'ano'=>'2016',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'NBA 2K21',
+            'ano'=>'2020',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Fortnite',
+            'ano'=>'2017',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Star Wars: Squadrons',
+            'ano'=>'2021',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Resident Evil 8: Village',
+            'ano'=>'2021',
+            'id_director'=>$faker->numberBetween(1,$numero_directores),
+            'stock'=>$faker->numberBetween(5,100),
+            'precio'=>$faker->randomFloat(2,17000,50000)
+        ]);
+
+        Juego::create([
+            'nombre'=>'Heroes of the Storm',
+            'ano'=>'2015',
             'id_director'=>$faker->numberBetween(1,$numero_directores),
             'stock'=>$faker->numberBetween(5,100),
             'precio'=>$faker->randomFloat(2,17000,50000)

@@ -9,6 +9,11 @@ class Director extends Model
 {
     //use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['id','nombre','id_marca'];
-    protected $hidden = ['created_at','updated_at'];
+    protected $fillable = ['id','nombre'];
+    protected $hidden = ['created_at','updated_at','id_marca'];
+
+    public function marca()
+    {
+        return $this->belongsTo(Marca::class, 'id_marca');
+    }
 }

@@ -35,11 +35,6 @@ class AlquilerController extends Controller
 
     public function create(Request $request)
     {
-		// if (!$request->input('valor_total') || !$request->input('fecha_reservacion') || !$request->input('fecha_devolucion') || !$request->input('id_estado') || !$request->input('id_cliente'))
-		// {
-		// 	return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos agregar estado.'])],422);
-		// }
-
         $validatedData = $request->validate([
             'valor_total' => ['required', 'unique:posts', 'max:255'],
             'fecha_reservacion' => ['required'],
