@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://nevergate.com.co/"><img src="https://nevergate.com.co/portafolio/images/logo.png" width="200"></a>
+<a href="https://nevergate.com.co/"><img src="https://nevergate.com.co/otros/portafolio/images/logo.png" width="200"></a>
 </p>
 
 
@@ -53,7 +53,7 @@ Una vez se tengan las herramientas instaladas:
     - Crear el nombre de la base de datos en MySql
 4. Abrir la consola y ejecutar el comando `php artisan migrate:refresh --seed`
 5. Luego ejecutar el comando `php artisan serve`
-6. Ya estara corriendo la aplicacion
+6. Ya estara corriendo la aplicacion desde la ruta estandar http://127.0.0.1:8000/api/alquiler
 
 # Notas
 
