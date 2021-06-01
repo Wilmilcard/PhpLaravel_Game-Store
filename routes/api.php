@@ -67,7 +67,7 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     //Alquiler
     $controller_alquiler ='AlquilerController@';
     Route::get('alquiler', "{$controller_alquiler}index");
-    Route::get('alquiler/{nit}', "{$controller_alquiler}show");
+    Route::get('alquiler/{id}', "{$controller_alquiler}show");
     Route::post('alquiler/create',"{$controller_alquiler}create");
     Route::put('alquiler/{id}',"{$controller_alquiler}update");
     Route::patch('alquiler/{id}',"{$controller_alquiler}update");
@@ -75,7 +75,7 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     //Director
     $controller_director ='DirectorController@';
     Route::get('director', "{$controller_director}index");
-    Route::get('director/{nit}', "{$controller_director}show");
+    Route::get('director/{id}', "{$controller_director}show");
     Route::post('director/create',"{$controller_director}create");
     Route::put('director/{id}',"{$controller_director}update");
     Route::delete('director/{id}',"{$controller_director}destroy");
