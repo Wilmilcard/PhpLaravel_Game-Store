@@ -80,6 +80,11 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     Route::put('director/{id}',"{$controller_director}update");
     Route::delete('director/{id}',"{$controller_director}destroy");
 
+    //Juego
+    $controller_juego ='JuegoController@';
+    Route::get('juego', "{$controller_juego}index");
+    Route::get('juego/{id}', "{$controller_juego}show");
+
 });
 
 

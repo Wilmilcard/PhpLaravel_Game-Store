@@ -11,7 +11,7 @@ class ClienteController extends Controller
 {
     public function index()
     {
-        $cliente = Cache::remember('cacheestados', 20/60, function () {
+        $cliente = Cache::remember('cachecliente', 20/60, function () {
             return Cliente::simplePaginate(50);
         });
         return response()->json(['status'=>'ok', 'siguiente'=>$cliente->nextPageUrl(),'anterior'=>$cliente->previousPageUrl(),'data'=>$cliente->items()],200);
