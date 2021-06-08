@@ -26,7 +26,7 @@ class AlquilerDetSeeder extends Seeder
             $numero_reservas = $faker->numberBetween(1,10);
             Alquiler_det::create(
                 [
-                    'id_alquiler'=>$i,
+                    'id_alquiler'=>$faker->numberBetween(1,$numero_alquileres),
                     'id_juego'=>$faker->numberBetween(1,$numero_juegos),
                     'cantidad'=>$numero_reservas,
                     'valor'=>$numero_reservas * 15000
