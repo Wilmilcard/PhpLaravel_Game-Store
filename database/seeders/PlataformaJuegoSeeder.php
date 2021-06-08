@@ -25,7 +25,7 @@ class PlataformaJuegoSeeder extends Seeder
         {
             Plataforma_juego::create(
                 [
-                    'id_juego'=>$i,
+                    'id_juego'=>$faker->numberBetween(1,$numero_juegos),
                     'id_plataforma'=>$faker->numberBetween(1,$numero_plataformas)
                 ]
             );
