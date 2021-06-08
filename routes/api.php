@@ -84,6 +84,9 @@ Route::group(['namespace'=>'App\Http\Controllers'],function(){
     $controller_juego ='JuegoController@';
     Route::get('juego', "{$controller_juego}index");
     Route::get('juego/{id}', "{$controller_juego}show");
+    Route::post('juego/create',"{$controller_juego}create");
+    Route::put('juego/{id}',"{$controller_juego}update");
+    Route::patch('juego/{id}',"{$controller_juego}update");
 
 });
 
