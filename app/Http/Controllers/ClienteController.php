@@ -30,7 +30,7 @@ class ClienteController extends Controller
     {
 		if (!$request->input('nombre') || !$request->input('nit') || !$request->input('telefono') || !$request->input('nacimiento'))
 		{
-			return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos agregar estado.'])],422);
+			return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos para agregar cliente.'])],422);
 		}
 
         try

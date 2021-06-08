@@ -32,7 +32,7 @@ class JuegoController extends Controller
 
         if (!$request->input('nombre') || !$request->input('ano') || !$request->input('stock') || !$request->input('precio') || !$request->input('id_director'))
 		{
-			return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos agregar juego.'])],422);
+			return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos para agregar juego.'])],422);
 		}
 
         try

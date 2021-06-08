@@ -32,7 +32,7 @@ class EstadoController extends Controller
     {
 		if (!$request->input('nombre'))
 		{
-			return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos agregar estado.'])],422);
+			return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos para agregar estado.'])],422);
 		}
 
         try

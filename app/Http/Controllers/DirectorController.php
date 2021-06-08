@@ -29,10 +29,10 @@ class DirectorController extends Controller
 
     public function create(Request $request)
     {
-        $validatedData = $request->validate([
-            'nombre' => ['required'],
-            'id_marca' => ['required']
-        ]);
+        if (!$request->input('nombre') || !$request->input('id_marca'))
+		{
+			return response()->json(['error'=>array(['codigo'=>422,'mensaje'=>'Faltan datos para agregar director.'])],422);
+		}
 
         try
         {
