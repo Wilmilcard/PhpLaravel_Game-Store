@@ -55,6 +55,33 @@ Una vez se tengan las herramientas instaladas:
 5. Luego ejecutar el comando `php artisan serve`
 6. Ya estara corriendo la aplicacion desde la ruta estandar http://127.0.0.1:8000/api/alquiler
 
-# Notas
+# API
 
-- La conexion a la base de datos esta localmente, una vez se estabilice el codigo dejare el link del repositorio para consumir el API
+- Es posible consumir el API por medio de GET. dejare el listado de url en las que pueden traer información
+    - Alquileres
+        - Traer todos los alquiler: http://api-game-store.nevergate.com.co/api/alquiler
+        - Traer solo un alquiler por Id: http://api-game-store.nevergate.com.co/api/alquiler/{id} donde el id es un numero
+    - Juegos
+        - Traer todos los juegos: http://api-game-store.nevergate.com.co/api/juego
+        - Traer solo un juego por Id: http://api-game-store.nevergate.com.co/api/juego/{id} donde el id es un numero
+    - Clientes
+        - Traer todos los clientes: http://api-game-store.nevergate.com.co/api/cliente
+        - Traer solo un cliente por Nit: http://api-game-store.nevergate.com.co/api/cliente/{nit} donde el id es un numero de identificación
+    - Director
+        - Traer todos los directores: http://api-game-store.nevergate.com.co/api/director
+        - Traer solo un director por Id: http://api-game-store.nevergate.com.co/api/director/{id} donde el id es un numero
+    - Plataforma
+        - Traer todos los plataformas: http://api-game-store.nevergate.com.co/api/plataforma
+        - Traer solo un plataforma por Id: http://api-game-store.nevergate.com.co/api/plataforma/{id} donde el id es un numero
+    - Marca
+        - Traer todos los marcas: http://api-game-store.nevergate.com.co/api/marca
+        - Traer solo un marca por Id: http://api-game-store.nevergate.com.co/api/marca/{id} donde el id es un numero
+    - Protagonista
+        - Traer todos los marcas: http://api-game-store.nevergate.com.co/api/marca
+        - Traer solo un marca por Id: http://api-game-store.nevergate.com.co/api/marca/{id} donde el id es un numero
+    - Estado
+        - Traer todos los estados: http://api-game-store.nevergate.com.co/api/estado
+        - Traer solo un estado por Id: http://api-game-store.nevergate.com.co/api/estado/{id} donde el id es un numero
+    
+Esta API puede ir mejorando y cambiando, pero mientras tanto esta es una muestra real de lo que puede hacer :)
+    
