@@ -3,7 +3,7 @@
 </p>
 
 
-# Objetivo
+# 🚩 Objetivo
 
 Este proyecto esta desarrollado en php laravel 8; con el fin de demostrar habilidades en el manejo del framework, y para practicar y mejorar los conocimientos aprendidos con ayuda de la documentacion oficial; para ello se planteo un ejercicio con el fin de darle solución desde el BackEnd.
 
@@ -14,9 +14,9 @@ Tambien existe una misma verision del api desarrollada en php Laravel 8. Asi que
 - **[Web del desarrollador](https://nevergate.com.co/)**
 - **[Link de la documentación](https://manuais.iessanclemente.net/index.php/LARAVEL_Framework_-_Tutorial_01_-_Creaci%C3%B3n_de_API_RESTful_(actualizado))**
 
-# Descripción del proyecto
+# 📄 Descripción del proyecto
 
-## Reto
+## ✔ Reto
 
 Usted ha sido contratado para gestionar todo el proceso básico de venta de una tienda de video juegos, por lo que el dueño tiene la necesidad clara de:
 - Almacenar la información básica de los clientes para poder conocer quien tiene alquilado un juego y poder reclamarlo cuando se venza el periodo de alquiler
@@ -32,13 +32,13 @@ Usted ha sido contratado para gestionar todo el proceso básico de venta de una 
 - Tener registrado de cada titulo, nombre, año, protagonistas, director, productor y tecnología (Xbox, PlayStation, Nintendo,PC,…)
 - El dueño quiere exponer un servicio web para que cualquier cliente consulte su balance, fecha de entraga  y títulos alquilados
 
-## Supuestos y restricciones
+## ❌ Supuestos y restricciones
 
 - No se necesita el manejo de usuarios, login y autenticacion
 - Es importante poder ver el proceso de actualizaciones y uso del repositorio GIT a medida que desarrolla el mini proyecto
 - Puede adicionar componentes que necesite para lograr el objetivo, solo que debe documentar la razón de usarlo y en maximiza su uso.
 
-# Ejecucion de proyecto
+# 🔥 Ejecucion de proyecto
 
 Para que el proyecto funcione correctamente se debe de tener instalado:
 
@@ -53,13 +53,13 @@ Una vez se tengan las herramientas instaladas:
 1. Clonar el repositorio
 2. Encender XAMPP (el apache y el MySql)
 3. Entrar al MySql y crear la base de datos con nombre: **matrix_tech**
-    - Si se desea cambiar el nombre de la base de datos hay que ir al archivo `.env` y dentro en la *linea 13* en la propiedad **DB_DATABASE** darle el nombre de la base de datos que se desea agregar
+    - 💡 Si se desea cambiar el nombre de la base de datos hay que ir al archivo `.env` y dentro en la *linea 13* en la propiedad **DB_DATABASE** darle el nombre de la base de datos que se desea agregar
     - Crear el nombre de la base de datos en MySql
 4. Abrir la consola y ejecutar el comando `php artisan migrate:refresh --seed`
 5. Luego ejecutar el comando `php artisan serve`
 6. Ya estara corriendo la aplicacion desde la ruta estandar http://127.0.0.1:8000/api/alquiler
 
-# API
+# 🧪 API
 
 - Es posible consumir el API por medio de GET. dejare el listado de url en las que pueden traer información
     - Alquileres
@@ -87,5 +87,5 @@ Una vez se tengan las herramientas instaladas:
         - Traer todos los estados: http://api-game-store.nevergate.com.co/api/estado
         - Traer solo un estado por Id: http://api-game-store.nevergate.com.co/api/estado/{id} donde el id es un numero
     
-Esta API puede ir mejorando y cambiando, pero mientras tanto esta es una muestra real de lo que puede hacer :)
+Esta API puede ir mejorando y cambiando, pero mientras tanto esta es una muestra real de lo que puede hacer 🛴
     
