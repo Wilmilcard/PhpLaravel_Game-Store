@@ -5,7 +5,11 @@
 
 # Objetivo
 
-Este proyecto esta desarrollado en php laravel 8 con el fin de demostrar habilidades en el manejo del framework, y para practicar y mejorar los conocimientos aprendidos con ayuda de la documentacion oficial; para ello se planteo un ejercicio con el fin de darle solución desde el BackEnd.
+Este proyecto esta desarrollado en php laravel 8; con el fin de demostrar habilidades en el manejo del framework, y para practicar y mejorar los conocimientos aprendidos con ayuda de la documentacion oficial; para ello se planteo un ejercicio con el fin de darle solución desde el BackEnd.
+
+Tambien existe una misma verision del api desarrollada en php Laravel 8. Asi que si tambien se esta interesad@ en revisar la otra version, puede hacerlo desde este enlace:
+
+**[Version C# CodeFirst](https://github.com/Wilmilcard/GameStore.API)**
 
 - **[Web del desarrollador](https://nevergate.com.co/)**
 - **[Link de la documentación](https://manuais.iessanclemente.net/index.php/LARAVEL_Framework_-_Tutorial_01_-_Creaci%C3%B3n_de_API_RESTful_(actualizado))**
