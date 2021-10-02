@@ -1,7 +1,8 @@
 <p align="center">
     <h3 align="center">Juan David Leon Barrera</h3>
 	<p align="center">
-		<img src="https://img.shields.io/static/v1?label=Tipo&message=PHP%20Laravel&color=orange" alt="template repository">
+		<img src="https://img.shields.io/badge/Laravel-FF2D20?logo=laravel&logoColor=white" alt="template repository">
+        <img src="https://img.shields.io/static/v1?label=proyecto&message=Api Rest&color=white" alt="v1.0.0">
 		<img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=blue" alt="v1.0.0">
 		<img src="https://img.shields.io/static/v1?label=licencia&message=no%20tiene&color=green" alt="no tiene">
 	</p>
