@@ -70,7 +70,7 @@ Una vez se tengan las herramientas instaladas:
 
 # 🧪 API
 
-- Es posible consumir el API por medio de GET. dejare el listado de url en las que pueden traer información
+- Es posible consumir el API por medio de GET ya que para no generar trafico de mas en mi Host elimine los otros metodos. dejare el listado de url en las que pueden traer información
     - Alquileres
         - Traer todos los alquiler: http://api-game-store.nevergate.com.co/api/alquiler
         - Traer solo un alquiler por Id: http://api-game-store.nevergate.com.co/api/alquiler/{id} donde el id es un numero
