@@ -11,7 +11,6 @@
     </p>
 </p>
 
-
 # 🚩 Objetivo
 
 Este proyecto esta desarrollado en php laravel 8; con el fin de demostrar habilidades en el manejo del framework, y para practicar y mejorar los conocimientos aprendidos con ayuda de la documentacion oficial; para ello se planteo un ejercicio con el fin de darle solución desde el BackEnd.
