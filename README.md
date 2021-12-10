@@ -71,29 +71,29 @@ Una vez se tengan las herramientas instaladas:
 
 - Es posible consumir el API por medio de GET ya que para no generar trafico de mas en mi Host elimine los otros metodos. dejare el listado de url en las que pueden traer información
     - Alquileres
-        - Traer todos los alquiler: http://api-game-store.nevergate.com.co/api/alquiler
-        - Traer solo un alquiler por Id: http://api-game-store.nevergate.com.co/api/alquiler/{id} donde el id es un numero
+        - Traer todos los alquiler: https://api-game-store.nevergate.com.co/api/alquiler
+        - Traer solo un alquiler por Id: https://api-game-store.nevergate.com.co/api/alquiler/{id} donde el id es un numero
     - Juegos
-        - Traer todos los juegos: http://api-game-store.nevergate.com.co/api/juego
-        - Traer solo un juego por Id: http://api-game-store.nevergate.com.co/api/juego/{id} donde el id es un numero
+        - Traer todos los juegos: https://api-game-store.nevergate.com.co/api/juego
+        - Traer solo un juego por Id: https://api-game-store.nevergate.com.co/api/juego/{id} donde el id es un numero
     - Clientes
-        - Traer todos los clientes: http://api-game-store.nevergate.com.co/api/cliente
-        - Traer solo un cliente por Nit: http://api-game-store.nevergate.com.co/api/cliente/{nit} donde el id es un numero de identificación
+        - Traer todos los clientes: https://api-game-store.nevergate.com.co/api/cliente
+        - Traer solo un cliente por Nit: https://api-game-store.nevergate.com.co/api/cliente/{nit} donde el id es un numero de identificación
     - Director
-        - Traer todos los directores: http://api-game-store.nevergate.com.co/api/director
-        - Traer solo un director por Id: http://api-game-store.nevergate.com.co/api/director/{id} donde el id es un numero
+        - Traer todos los directores: https://api-game-store.nevergate.com.co/api/director
+        - Traer solo un director por Id: https://api-game-store.nevergate.com.co/api/director/{id} donde el id es un numero
     - Plataforma
-        - Traer todos los plataformas: http://api-game-store.nevergate.com.co/api/plataforma
-        - Traer solo un plataforma por Id: http://api-game-store.nevergate.com.co/api/plataforma/{id} donde el id es un numero
+        - Traer todos los plataformas: https://api-game-store.nevergate.com.co/api/plataforma
+        - Traer solo un plataforma por Id: https://api-game-store.nevergate.com.co/api/plataforma/{id} donde el id es un numero
     - Marca
-        - Traer todos los marcas: http://api-game-store.nevergate.com.co/api/marca
-        - Traer solo un marca por Id: http://api-game-store.nevergate.com.co/api/marca/{id} donde el id es un numero
+        - Traer todos los marcas: https://api-game-store.nevergate.com.co/api/marca
+        - Traer solo un marca por Id: https://api-game-store.nevergate.com.co/api/marca/{id} donde el id es un numero
     - Protagonista
-        - Traer todos los marcas: http://api-game-store.nevergate.com.co/api/marca
-        - Traer solo un marca por Id: http://api-game-store.nevergate.com.co/api/marca/{id} donde el id es un numero
+        - Traer todos los marcas: https://api-game-store.nevergate.com.co/api/marca
+        - Traer solo un marca por Id: https://api-game-store.nevergate.com.co/api/marca/{id} donde el id es un numero
     - Estado
-        - Traer todos los estados: http://api-game-store.nevergate.com.co/api/estado
-        - Traer solo un estado por Id: http://api-game-store.nevergate.com.co/api/estado/{id} donde el id es un numero
+        - Traer todos los estados: https://api-game-store.nevergate.com.co/api/estado
+        - Traer solo un estado por Id: https://api-game-store.nevergate.com.co/api/estado/{id} donde el id es un numero
     
 Esta API puede ir mejorando y cambiando, pero mientras tanto esta es una muestra real de lo que puede hacer 🛴
     
