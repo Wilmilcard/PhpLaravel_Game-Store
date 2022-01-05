@@ -19,6 +19,7 @@ Tambien existe una misma verision del api desarrollada en php Laravel 8. Asi que
 
 **[Version C# CodeFirst](https://github.com/Wilmilcard/GameStore.API)**
 
+- **[Portal del Api](https://game-store-portal.nevergate.com.co/)**
 - **[Web del desarrollador](https://nevergate.com.co/)**
 - **[Link de la documentación](https://manuais.iessanclemente.net/index.php/LARAVEL_Framework_-_Tutorial_01_-_Creaci%C3%B3n_de_API_RESTful_(actualizado))**
 
