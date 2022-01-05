@@ -17,7 +17,7 @@ Este proyecto esta desarrollado en php laravel 8; con el fin de demostrar habili
 
 Tambien existe una misma verision del api desarrollada en php Laravel 8. Asi que si tambien se esta interesad@ en revisar la otra version, puede hacerlo desde este enlace:
 
-🍍**[Version C# CodeFirst](https://github.com/Wilmilcard/GameStore.API)** 🍍
+🍍 **[Version C# CodeFirst](https://github.com/Wilmilcard/GameStore.API)** 🍍
 
 - **[Portal del Api](https://game-store-portal.nevergate.com.co/)**
 - **[Web del desarrollador](https://nevergate.com.co/)**
