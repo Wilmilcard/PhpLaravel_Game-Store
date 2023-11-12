@@ -68,6 +68,14 @@ Una vez se tengan las herramientas instaladas:
 5. Luego ejecutar el comando `php artisan serve`
 6. Ya estara corriendo la aplicacion desde la ruta estandar http://127.0.0.1:8000/api/alquiler
 
+**Nota (12/11/2023):** Al parecer por las ultimas actualizaciones de PHP y dado que lleva mucho el proyecto desde que lo cree; el proyecto se atora en el paso 3. Asi para que la migracion funcione tuve que ejecutar estas lineas en orden:
+   
+    > `composer update --ignore-platform-reqs`
+    > `php artisan config:clear`
+    > `php artisan cache:clear`
+
+reinicie el visual code (solo por si las dudas). Luego fui hasta el archivo `database.php` y cambie las credenciales de 'database' (linea 51) y 'username' (linea 52) que se habian cambiado por alguna razón. Ya una vez eso, segui en el paso 4.
+
 # 🧪 API
 
 - Es posible consumir el API por medio de GET ya que para no generar trafico de mas en mi Host elimine los otros metodos. dejare el listado de url en las que pueden traer información
