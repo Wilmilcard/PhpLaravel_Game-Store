@@ -68,7 +68,7 @@ Una vez se tengan las herramientas instaladas:
 5. Luego ejecutar el comando `php artisan serve`
 6. Ya estara corriendo la aplicacion desde la ruta estandar http://127.0.0.1:8000/api/alquiler
 
-**Nota (12/11/2023):** Al parecer por las ultimas actualizaciones de PHP y dado que lleva mucho el proyecto desde que lo cree; el proyecto se atora en el paso 3. Asi para que la migracion funcione tuve que ejecutar estas lineas en orden:
+⚠️**Nota (12/11/2023):** Al parecer por las ultimas actualizaciones de PHP y dado que lleva mucho el proyecto desde que lo cree; el proyecto se atora en el paso 3. Asi para que la migracion funcione tuve que ejecutar estas lineas en orden:
    
     > `composer update --ignore-platform-reqs`
     > `php artisan config:clear`
