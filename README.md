@@ -74,7 +74,7 @@ Una vez se tengan las herramientas instaladas:
     > `php artisan config:clear`
     > `php artisan cache:clear`
 
-reinicie el visual code (solo por si las dudas). Luego fui hasta el archivo `database.php` y cambie las credenciales de 'database' (linea 51) y 'username' (linea 52) que se habian cambiado por alguna razón. Ya una vez eso, segui en el paso 4.
+reinicie el visual code (solo por si las dudas). Luego fui hasta el archivo `\config\database.php` y cambie las credenciales de 'database' (linea 51) y 'username' (linea 52) que se habian cambiado por alguna razón. Ya una vez eso, segui en el paso 4.
 
 # 🧪 API
 
